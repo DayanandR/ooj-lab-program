@@ -1,0 +1,33 @@
+class Gen<I,S,D>
+{ I iob; S strob; D dob;
+ Gen(I io,S so,D doj)
+ { iob = io;
+ strob = so;
+ dob= doj;}
+ I getiob()
+ { return iob; }
+ S getstrob()
+ { return strob; }
+ D getdob()
+ { return dob; }
+ void showType()
+ { System.out.println("Types are\n1." + iob.getClass().getName() + "\n2."+strob.getClass().getName() +
+"\n3."+dob.getClass().getName()); }
+}
+class GenDemo
+{ public static void main(String args[])
+ { Gen<Integer,String,Double> GOb = new Gen<Integer,String,Double>(100,"Hello",3.14159);
+ GOb.showType();
+ int i = GOb.getiob();
+ String str = GOb.getstrob();
+ double d = GOb.getdob();
+ System.out.println();
+ System.out.println("Integer: ");
+ System.out.println("value: " + i);
+ System.out.println("String: ");
+ System.out.println("value: " + str);
+ System.out.println("Double: ");
+ System.out.println("value: " + d);
+
+}
+}
